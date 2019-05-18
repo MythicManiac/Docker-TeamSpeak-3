@@ -4,6 +4,12 @@ tsdir=/home/teamspeak3/teamspeak3-server_linux_amd64/
 if ! [ -L ${tsdir}ts3server.sqlitedb ]; then
     ln -s ${volume}ts3server.sqlitedb ${tsdir}ts3server.sqlitedb
 fi
+if ! [ -L ${tsdir}ts3server.sqlitedb-wal ]; then
+    ln -s ${volume}ts3server.sqlitedb-wal ${tsdir}ts3server.sqlitedb-wal
+fi
+if ! [ -L ${tsdir}ts3server.sqlitedb-shm ]; then
+    ln -s ${volume}ts3server.sqlitedb-shm ${tsdir}ts3server.sqlitedb-shm
+fi
 if ! [ -L ${tsdir}files ]; then
     ln -s ${volume}files ${tsdir}files
 fi
